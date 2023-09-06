@@ -2,6 +2,8 @@ steps:
 #install
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
+  options:
+  logging: CLOUD_LOGGING_ONLY
 
 #Test
 
