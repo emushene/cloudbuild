@@ -1,6 +1,6 @@
 steps:
   - timeout: "600s"
-  - name: gcr.io/bezvalley-sacco/firebase
+  - name: 'gcr.io/bezvalley-sacco/firebase'
     args: ['deploy', '--project=bezvalley-sacco', '--only=hosting' ]
 
 options:
