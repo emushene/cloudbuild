@@ -1,21 +1,32 @@
 steps:
-#install
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['install']
-  options:
-  logging: CLOUD_LOGGING_ONLY
+  - timeout: "600s"
+  - name: gcr.io/bezvalley-sacco/firebase
+    args: ['deploy', '--project=bezvalley-sacco', '--only=hosting' ]
 
-#Test
 
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'test:unit']
 
-  #Build
 
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'build']
 
-    #Deploy
 
-- name: 'gcr.io/$PROJECT_ID/firebase'
-  args: ['deploy']
+
+# steps:
+# #install
+# - name: 'gcr.io/cloud-builders/npm'
+#   args: ['install']
+#   options:
+#   logging: CLOUD_LOGGING_ONLY
+
+# #Test
+
+# - name: 'gcr.io/cloud-builders/npm'
+#   args: ['run', 'test:unit']
+
+#   #Build
+
+# - name: 'gcr.io/cloud-builders/npm'
+#   args: ['run', 'build']
+
+#     #Deploy
+
+# - name: 'gcr.io/$PROJECT_ID/firebase'
+#   args: ['deploy']
