@@ -2,8 +2,9 @@ steps:
   - timeout: "600s"
   - name: gcr.io/bezvalley-sacco/firebase
     args: ['deploy', '--project=bezvalley-sacco', '--only=hosting' ]
-    options:
-      logging: CLOUD_LOGGING_ONLY
+
+options:
+  logging: CLOUD_LOGGING_ONLY
 
 
 
