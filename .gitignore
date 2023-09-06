@@ -15,6 +15,9 @@
 # production
 /build
 
+# Other Files
+/cloud-builders-community
+
 # misc
 .DS_Store
 *.pem
